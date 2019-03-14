@@ -42,15 +42,15 @@ class Home extends CI_Controller{
 
 		public function __construct(){
 			parent::__construct();
-			$this->load->model('pengumuman_model');
+			$this->load->model('Pengumuman_model');
 		}
 
 		public function pengumuman(){
 			$data=array('title' 			=>'Pengumuman Siswa',
-									'pengumuman'	=> $this->pengumuman_model->daftar_pengumuman(),
+									'pengumuman'	=> $this->Pengumuman_model->daftar_pengumuman(),
 									'isi' 				=>'home/index_home'
 											);
-			$this->load->view('layout/wrapper',$data);
+								$this->load->view('siswa/pengumuman');
 		}									
 		
 }
