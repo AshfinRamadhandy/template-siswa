@@ -12,9 +12,16 @@ function __construct(){
       $username = $this->input->post('username');
       $password = $this->input->post('password');
       $berhasil = $this->model_userLog->login($username,$password);
-      echo $berhasil;
+      
     }else{
         $this->load->view('form_login');
     }
+  }
+
+  if($berhasil == 1){
+		$this->session->set_userdata(array('status_login'=>'sukses'));
+		redirect('dasbor');
+  		}else{
+	redirect('index.php/auth/login');
   }
 }
