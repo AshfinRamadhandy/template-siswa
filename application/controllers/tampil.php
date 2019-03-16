@@ -7,7 +7,7 @@ class tampil extends CI_Controller{
 	}
  
 	function index(){
-		$data['data_siswa'] = $this->m_data->tampil_data()->result();
+		$data['siswa'] = $this->m_data->tampil_data()->result();
 		$this->load->view('v_tampil',$data);
 	}
 
