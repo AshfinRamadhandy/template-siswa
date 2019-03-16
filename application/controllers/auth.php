@@ -14,14 +14,14 @@ function __construct(){
       $berhasil = $this->model_userLog->login($username,$password);
       
     }else{
-        $this->load->view('login');
-    }
-  }
-
-  if($berhasil == 1){
+        $this->load->view('form_login');
+	}
+	
+	if($berhasil == 1){
 		$this->session->set_userdata(array('status_login'=>'sukses'));
 		redirect('home');
   		}else{
 	redirect('index.php/auth/login');
+ 	 }
   }
 }

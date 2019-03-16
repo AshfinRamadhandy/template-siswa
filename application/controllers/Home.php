@@ -18,12 +18,12 @@ class Home extends CI_Controller{
       $this->load->view('template/footer');
       $this->load->view('siswa/nilai');
     }
-    // public function pengumuman(){
-    //   $data['judul']='Pengumuman';
-    //   $this->load->view('template/header',$data);
-    //   $this->load->view('template/sidebar'); 
-    //   $this->load->view('siswa/pengumuman');
-    // }
+    public function pengumuman(){
+      $data['judul']='Pengumuman';
+      $this->load->view('template/header',$data);
+      $this->load->view('template/sidebar'); 
+      $this->load->view('siswa/pengumuman');
+    }
 
     public function statusspp(){
       $data['judul']='Status Spp';
@@ -40,17 +40,17 @@ class Home extends CI_Controller{
 		
 		
 
-		public function __construct(){
-			parent::__construct();
-			$this->load->model('Pengumuman_model');
-		}
+		// public function __construct(){
+		// 	parent::__construct();
+		// 	$this->load->model('Pengumuman_model');
+		// }
 
-		public function pengumuman(){
-			$data=array('title' 			=>'Pengumuman Siswa',
-									'pengumuman'	=> $this->Pengumuman_model->daftar_pengumuman(),
-									'isi' 				=>'home/index_home'
-											);
-								$this->load->view('siswa/pengumuman');
-		}									
+		// public function pengumuman(){
+		// 	$data=array('title' 			=>'Pengumuman Siswa',
+		// 							'pengumuman'	=> $this->Pengumuman_model->daftar_pengumuman(),
+		// 							'isi' 				=>'home/index_home'
+		// 									);
+		// 						$this->load->view('siswa/pengumuman');
+		// }									
 		
 }
