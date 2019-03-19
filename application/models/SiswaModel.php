@@ -31,7 +31,7 @@ class SiswaModel extends CI_Model {
 			if($this->form_validation->run())
 				return TRUE;
 			else
-				retrun FALSE;
+				return FALSE;
 	}				
 
 	public function	save(){
