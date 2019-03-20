@@ -6,14 +6,16 @@
 <!-- <div class="row">
         <div class="col-sm-4">
           <h3><p align=center><b>DATA SISWA</b></h3>
-              <p> <p align=center> blm isi.</p> -->
-							<body>
+              <p> <p align=center> blm isi.</p> 
+							<body>-->
 <html>
   <body>
     <h1>Data siswa</h1>
     <hr>
-
-    <a href='<?php echo base_url("siswa/ubah"); ?>'>Ubah Data</a><br><br>
+		<img src="<?php echo base_url() ?>foto/CHA_0318.jpg" alt="foto" width="250">
+    <br>
+		<br>
+		<a href='<?php echo base_url("siswa/ubah"); ?>'>Ubah Data</a><br><br>
 
     <table border="2" cellpadding="50">
       <tr>
