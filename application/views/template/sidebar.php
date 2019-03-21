@@ -19,7 +19,7 @@
 						<li><a href="<?= base_url();?>home/jadwal"><i class="fa fa-bookmark-o"></i>Jadwal Siswa</a></li>
             <li><a href="<?= base_url();?>home/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
             <li><a href="<?= base_url();?>home/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
-
+						<li><a href="<?= base_url();?>logout/siswa"><i class="fa fa-sign-out"></i> Logout </a></li>
           </ul>
         </menu>
       </aside>

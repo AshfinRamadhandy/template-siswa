@@ -12,20 +12,28 @@
   <body>
     <h1>Data siswa</h1>
     <hr>
-		<img src="<?php echo base_url() ?>foto/CHA_0318.jpg" alt="foto" width="250">
+		<img src="<?php echo base_url() ?>foto/CHA_0318.jpg" alt="foto" width="150">
     <br>
 		<br>
 		<a href='<?php echo base_url("siswa/ubah"); ?>'>Ubah Data</a><br><br>
 
-    <table border="2" cellpadding="50">
-      <tr>
-        <th>NIS</th>
-        <th>Nama</th>
-        <th>Jenis Kelamin</th>
-        <th>Telepon</th>
-        <th>Alamat</th>
-        <th colspan="12">Aksi</th>
-      </tr>
+    <div class="panel-body">
+            <table id="mytable" class="table table-striped table-bordered table-hover table-full-width dataTable" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+												<th>NIS</th>
+                        <th>Nama</th>
+												<th>Jenis Kelamin</th>
+												<th>Telepon</th>
+                        <th>Alamat</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+
 
       <?php
       if( ! empty($siswa)){
@@ -35,7 +43,9 @@
           <td>".$data->nama."</td>
           <td>".$data->jenis_kelamin."</td>
           <td>".$data->telp."</td>
-          <td>".$data->alamat."</td>
+					<td>".$data->alamat."</td>
+					<td>".$data->tanggal_lahir."</td>
+					<td>".$data->foto."</td>
           <td><a href='".base_url("siswa/ubah/".$data->nis)."'>Ubah</a></td>
           <td><a href='".base_url("siswa/hapus/".$data->nis)."'>Hapus</a></td>
           </tr>";
