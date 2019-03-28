@@ -1,7 +1,7 @@
 <div class="container">
 <section class="content">
 <div class="jumbotron text-center">
-  <h2>Selamat Datang Siswa</h2>
+  <h2>Status Pembayaran SPP Siswa</h2>
 </div>
 
 <div class="col-md-12">   
