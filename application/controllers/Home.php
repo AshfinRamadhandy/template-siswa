@@ -38,11 +38,11 @@ class Home extends CI_Controller{
     $this->load->view('siswa/jadwal');
 		}
 		public function listsiswa(){
-			$data['siswa']=$this->M_siswa->getAll();
+			$data['siswa']=$this->SiswaModel->getAll();
 			// $dataEdit['siswa']=$this->M_siswa->getById();
 			
 			$this->load->view('template/header');
-			$this->load->view('admin/listsiswa', $data);
+			$this->load->view('siswa/home', $data);
 			$this->load->view('template/sidebar');
 			$this->load->view('template/footer'); 
 	  }
