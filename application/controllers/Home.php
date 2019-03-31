@@ -37,7 +37,15 @@ class Home extends CI_Controller{
     $this->load->view('template/sidebar'); 
     $this->load->view('siswa/jadwal');
 		}
-		
+		public function listsiswa(){
+			$data['siswa']=$this->M_siswa->getAll();
+			// $dataEdit['siswa']=$this->M_siswa->getById();
+			
+			$this->load->view('template/header');
+			$this->load->view('admin/listsiswa', $data);
+			$this->load->view('template/sidebar');
+			$this->load->view('template/footer'); 
+	  }
 		
 
 		// public function __construct(){
