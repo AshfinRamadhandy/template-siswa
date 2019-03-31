@@ -25,8 +25,9 @@ class SiswaModel extends CI_Model {
 			 'required');
 		$this->form_validation->set_rules('input_telp', 'telp',
 			 'required|numeric|max_length[12]');
-			 $this->form_validation->set_rules('input_alamat', 'Alamat',
+		 $this->form_validation->set_rules('input_alamat', 'Alamat',
 			 'required');
+			 
 
 			if($this->form_validation->run())
 				return TRUE;
@@ -34,6 +35,13 @@ class SiswaModel extends CI_Model {
 				return FALSE;
 	}				
 
+
+	public function getAll()
+    {
+        
+        return $this->db->get($this->_table)->result();
+        
+    }
 	public function	save(){
 		$data = array(
 			"nis" => $this->input->post('input_nis'),
@@ -42,7 +50,7 @@ class SiswaModel extends CI_Model {
 			"telp" => $this->input->post('input_telp'),
 			"alamat" => $this->input->post('input_alamat')
 		);
-
+		$this->db->insert($this->_table, $this);
 		$this->db->insert('siswa', $data);
 	}	 
 

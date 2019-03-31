@@ -9,9 +9,11 @@
               <p> <p align=center> blm isi.</p> 
 							<body>-->
 <html>
-  <body>
-    <h1>Data siswa</h1>
-    <hr>
+  
+<table width="100%">
+				<br><h2 align="center">Biodata Siswa</h2>
+					<thead>
+					<tr align="center">
 		<img src="<?php echo base_url() ?>foto/CHA_0318.jpg" alt="foto" width="150">
     <br>
 		<br>

@@ -8,7 +8,7 @@ class Home extends CI_Controller{
       $data['judul']='Selamat Datang Siswa';
       $this->load->view('template/header',$data);
       $this->load->view('template/sidebar'); 
-      $this->load->view('siswa/home');
+      $this->load->view('siswa/home',$data);
       $this->load->view('template/footer'); 
     }
     public function nilai(){
@@ -44,6 +44,7 @@ class Home extends CI_Controller{
 		// 	parent::__construct();
 		// 	$this->load->model('Pengumuman_model');
 		// }
+	
 
 		// public function pengumuman(){
 		// 	$data=array('title' 			=>'Pengumuman Siswa',
