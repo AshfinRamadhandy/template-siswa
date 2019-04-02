@@ -13,7 +13,7 @@ class Downloadjadwal extends CI_Controller {
 	}
 
 	public function lakukan_download(){				
-		force_download('foto/1.jpg',NULL);
+		force_download('foto/test.pdf',NULL);
 	}	
 
 }
